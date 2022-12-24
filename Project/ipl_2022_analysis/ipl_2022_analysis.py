@@ -36,3 +36,7 @@ fig.show()
 figure = px.bar(data, x=data["top_scorer"],
                 title="Top Scorers in IPL 2022")
 figure.show()
+
+figure = px.bar(data, x=data["top_scorer"], y=data["highscore"], color=data["highscore"],
+                title="Top Scorers in IPL 2022")
+figure.show()
