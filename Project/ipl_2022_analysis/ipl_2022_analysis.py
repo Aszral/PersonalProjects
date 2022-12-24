@@ -44,3 +44,7 @@ figure.show()
 figure = px.bar(data, x=data["player_of_the_match"],
                 title="Most Player of The Match Awards")
 figure.show()
+
+figure = px.bar(data, x=data["best_bowling"],
+                title="Best Bowlers in 2022")
+figure.show()
