@@ -48,3 +48,19 @@ figure.show()
 figure = px.bar(data, x=data["best_bowling"],
                 title="Best Bowlers in 2022")
 figure.show()
+
+figure = go.Figure()
+figure.add_trace(go.Bar(
+    x=data["venue"],
+    y=data["first_ings_wkts"],
+    name="First Innings Wickets",
+    marker_color='gold'
+))
+figure.add_trace(go.Bar(
+    x=data["venue"],
+    y=data["second_ings_wkts"],
+    name="Second Innings Wickets",
+    marker_color='lightgreen'
+))
+figure.update_layout(barmode='group', xaxis_tickangle=-45)
+figure.show()
