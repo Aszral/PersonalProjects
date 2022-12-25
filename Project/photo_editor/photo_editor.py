@@ -2,8 +2,6 @@ from PIL import Image, ImageEnhance, ImageFilter
 import os
 
 path = './imgs'
-path_Out = './editedImgs'
-
 for filename in os.listdir(path):
     img = Image.open(f'{path}/{filename}')
     edit = img.filter(ImageFilter.SHARPEN)
