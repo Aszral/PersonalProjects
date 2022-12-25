@@ -7,5 +7,8 @@ path_Out = './editedImgs'
 for filename in os.listdir(path):
     img = Image.open(f'{path}/{filename}')
     edit = img.filter(ImageFilter.SHARPEN)
+    factor = 1.5
+    enhancer = ImageEnhance.Contrast(edit)
+    edit = enhancer.enhance(factor)
     clean_name = os.path.splitext(filename)[0]
-    edit.save(f'.{path_Out}/{clean_name}_edited.jpg')
+    edit.save(f'{clean_name}_edited.jpg')
