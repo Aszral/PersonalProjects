@@ -130,4 +130,6 @@ dmypy.json
 
 # ignore ds store
 **/.DS_Store
-**.idea/**
+
+# ignore .idea folder
+.idea/
